@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Src/">
+    <Project Path="Src/LaFermeSeRebelle/LaFermeSeRebelle.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/LaFermeSeRebelle.Tests/LaFermeSeRebelle.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Éléments de solution/">
+    <File Path="Readme.md" />
+  </Folder>
+</Solution>
