@@ -1,4 +1,4 @@
-﻿namespace LaFermeSeRebelle;
+﻿namespace LaFermeSeRebelle.Animals;
 
 public interface IAnimalDeLaFerme
 {

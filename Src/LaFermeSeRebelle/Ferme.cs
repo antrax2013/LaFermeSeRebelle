@@ -1,4 +1,6 @@
-﻿namespace LaFermeSeRebelle;
+﻿using LaFermeSeRebelle.Animals;
+
+namespace LaFermeSeRebelle;
 
 public class Ferme(int Cloture, IEnumerable<IAnimalDeLaFerme> Animaux)
 {
