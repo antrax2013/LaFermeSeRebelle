@@ -3,6 +3,7 @@
 using LaFermeSeRebelle.Characteristics;
 using LaFermeSeRebelle.EvasionCalculation;
 using LaFermeSeRebelle.Logging;
+using LaFermeSeRebelle.Validation;
 
 /// <summary>
 /// Représente une chèvre de la ferme.
@@ -11,8 +12,16 @@ using LaFermeSeRebelle.Logging;
 public sealed class Chevre(string Nom, int Vitesse, int HauteurDeSaut, int Motivation)
     : AAnimalDeLaFerme(
         Nom,
-        new AnimalCharacteristics(Vitesse, HauteurDeSaut, Motivation),
+        ValidateAndCreateCharacteristics(Vitesse, HauteurDeSaut, Motivation),
         EvasionScoreCalculatorFactory.CreerCalculateurChevre(),
         LogProviderFactory.CreerLogsChevre()), IAnimalDeLaFerme
 {
+    private static IAnimalCharacteristics ValidateAndCreateCharacteristics(int vitesse, int hauteurDeSaut, int motivation)
+    {
+        var characteristics = new AnimalCharacteristics(vitesse, hauteurDeSaut, motivation);
+        var validator = CharacteristicsValidatorFactory.CreerValidateurChevre();
+        validator.Validate(characteristics);
+        return characteristics;
+    }
 }
+

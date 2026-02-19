@@ -41,7 +41,8 @@ public class UnitTests
         var logs = ferme.TenterEvasions().ToList();
 
         // Then
-        var expectedLogs = new[] {
+        var expectedLogs = new[]
+        {
             "La chèvre Marise a voulu sauter, mais a été distraite par une feuille appétissante.",
             "Le poulet Paulette bat des ailes frénétiquement, et est passé au‑delà de la clôture !",
             "Le canard Gedeon a battu des ailes… puis s'est souvenu qu'il préférait marcher."
